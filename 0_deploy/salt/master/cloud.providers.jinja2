@@ -1,0 +1,17 @@
+ec2-eu-west-1:
+    provider: ec2
+
+    location: eu-west-1
+    availability_zone: eu-west-1b
+
+    id: {{ salt['pillar.get']('salt-demo:ec2:id') }}
+    key: {{ salt['pillar.get']('salt-demo:ec2:key') }}
+
+    ssh_interface: private_ips
+    private_key: {{ salt['pillar.get']('salt-demo:ssh:keypath') }}
+    keyname: {{ salt['pillar.get']('salt-demo:ssh:keyname') }}
+
+    minion:
+      master: {{ salt['pillar.get']('salt-demo:ip') }}
+
+    ssh_username: ubuntu

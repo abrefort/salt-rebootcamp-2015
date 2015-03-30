@@ -1,0 +1,6 @@
+# /etc/salt/roster
+
+master:
+  host: x.x.x.x
+  user: ubuntu
+  sudo: True

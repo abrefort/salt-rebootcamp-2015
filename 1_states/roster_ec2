@@ -1,0 +1,14 @@
+minion1:
+  host: x.x.x.x
+  user: ubuntu
+  sudo: True
+
+minion2:
+  host: x.x.x.x
+  user: ubuntu
+  sudo: True
+
+minion3:
+  host: x.x.x.x
+  user: ubuntu
+  sudo: True

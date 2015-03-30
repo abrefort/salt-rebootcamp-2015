@@ -1,0 +1,8 @@
+salt-demo:
+  provider: ec2-eu-west-1
+  image: ami-234ecc54
+  size: t2.micro
+
+  subnetid: {{ salt['pillar.get']('salt-demo:ec2:subnetid') }}
+  securitygroupid:
+    - {{ salt['pillar.get']('salt-demo:ec2:securitygroupid') }}
